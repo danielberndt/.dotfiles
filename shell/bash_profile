@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+source ./.bash_aliases
+source ./.bash_exports
+source ./.bash_functions
+
+# Clear system messages (system copyright notice, the date
+# and time of the last login, the message of the day, etc.).
+
+clear

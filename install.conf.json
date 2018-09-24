@@ -1,0 +1,34 @@
+[
+  {
+    "defaults": {
+      "link": {
+        "relink": true
+      }
+    }
+  },
+  {
+    "clean": ["~"]
+  },
+  {
+    "link": {
+      "~/.gitconfig": "git/gitconfig",
+      "~/.gitignore": "git/gitignore",
+      "~/.bash_aliases": "shell/bash_aliases",
+      "~/.bash_exports": "shell/bash_exports",
+      "~/.bash_functions": "shell/bash_functions",
+      "~/.bash_profile": "shell/bash_profile",
+      "~/.zshrc": "shell/zshrc"
+    }
+  },
+  {
+    "shell": [
+      ["git submodule update --init --recursive", "Installing submodules"],
+      ["brew install fzy", "Installing fzy"],
+      [
+        "curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh",
+        "Installing zplug"
+      ],
+      ["zplug install", "Installing zplug plugins"]
+    ]
+  }
+]

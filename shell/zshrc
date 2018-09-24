@@ -1,0 +1,28 @@
+autoload -U colors && colors
+source ~/.profile
+source ~/.bash_profile
+
+bindkey -e
+
+source ~/.zplug/init.zsh
+zplug "b4b4r07/enhancd", use:init.sh
+zplug "olivierverdier/zsh-git-prompt", use:zshrc.sh
+zplug "zsh-users/zsh-autosuggestions", use:zsh-autosuggestions.zsh
+zplug "zsh-users/zsh-completions", use:zsh-completions.plugin.zsh
+zplug "zsh-users/zsh-syntax-highlighting", use:zsh-syntax-highlighting.zsh
+zplug "zsh-users/zsh-history-substring-search", use:zsh-history-substring-search.zsh, \
+  hook-load:"bindkey '^[[A' history-substring-search-up && bindkey '^[[B' history-substring-search-down"
+zplug load
+
+# source ~/.zsh/git-prompt/zshrc.sh
+
+PS1='%* %B%c%b$(git_super_status)%B %# %b'
+
+
+# don't close terminal window when hitting ctrl-d
+
+setopt ignoreeof
+
+setopt hist_ignore_all_dups sharehistory
+setopt hist_ignore_space
+

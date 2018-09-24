@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+alias ls='ls -G'
+alias ll='ls -Gl'
+alias beep='echo -en "\007"'
+
+alias '..'='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'

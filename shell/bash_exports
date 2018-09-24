@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+export EDITOR=vi
+
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+export HISTFILESIZE=10000
+export HISTSIZE=10000
+export HISTFILE=~/.zsh_history
+
+# Use standard ISO 8601 timestamp
+export HISTTIMEFORMAT='%F %T '
+
+# Ignore commands that start with spaces and duplicates.
+export HISTCONTROL=ignoreboth
+# Don't add certain commands to the history file.
+export HISTIGNORE="&:[bf]g:c:clear:history:exit:q:pwd:* --help"
+
+# Make new shells get the history lines from all previous
+# shells instead of the default "last window closed" history.
+export PROMPT_COMMAND="history -a; $PROMPT_COMMAND"

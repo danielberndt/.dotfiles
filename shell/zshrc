@@ -14,15 +14,15 @@ zplug "zsh-users/zsh-history-substring-search", use:zsh-history-substring-search
   hook-load:"bindkey '^[[A' history-substring-search-up && bindkey '^[[B' history-substring-search-down"
 zplug load
 
-# source ~/.zsh/git-prompt/zshrc.sh
-
 PS1='%* %B%c%b$(git_super_status)%B %# %b'
 
 
 # don't close terminal window when hitting ctrl-d
 
 setopt ignoreeof
-
+HISTSIZE=10000
+HISTFILE=~/.zsh_history
+SAVEHIST=10000
 setopt hist_ignore_all_dups sharehistory
 setopt hist_ignore_space
 

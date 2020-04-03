@@ -4,6 +4,7 @@
 
 - git
 - brew
+- `brew install gawk`
 
 ## install
 
